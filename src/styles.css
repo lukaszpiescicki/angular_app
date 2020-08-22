@@ -1,1 +1,165 @@
 /* You can add global styles to this file, and also import other style files */
+/* Ustalenie właściwości "box-sizing" dla wszystkich elementów */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Właściwości dla body */
+  body {
+    height: 100vh;
+    font-family: 'Baloo Tamma 2', cursive;;
+    font-size: 16px;
+    margin:0;
+  }
+
+  app-root{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Klasa kontenera, która ma ograniczoną szerokość i wyśrodkowuje content */
+  /* Ustawienie lewego i prawego marginesu na "auto" wyśrodkowuje kontener */
+  .container {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  /*Linki*/
+  a{
+    color: #777777;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  a:hover{
+    color: #e74c3c;
+  }
+  /*Nagłówki*/
+  h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: 2px solid black;
+  }
+  /* Tabele */
+  table {
+    width: 100%;
+  }
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+  }
+  /* Cieniujemy co drugi (parzysty) wiersz tabeli */
+  /* Używamy tbody, aby upewnić się, że nie cieniujemy nagłówka - to zachowuje kolejność cieniowania */
+  table tbody > tr:nth-child(odd) {
+    background: #eeeeee;
+  }
+  
+  /* Przyciski */
+  .button {
+    display: inline-block;
+    margin: 2px 2px;
+    padding: 15px 25px 12px 25px;
+    border: 0;
+    background: #999999;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 14px;
+  }
+  /* Przycisk po najechaniu kursorem */
+  .button:hover {
+    background: #888888;
+    color: white;
+  }
+  /* Przycisk w stanie aktywnym */
+  .button:active,
+  .button:focus {
+    background: #777777;
+  }
+  
+  /* Przycisk w kolorze zielonym */
+  .button-green {
+    background: #33cc55;
+  }
+  .button-green:hover {
+    background: #80838d;
+  }
+  .button-green:active,
+  .button-green:focus {
+    background: #80838d;
+  }
+  
+  /* Przycisk w kolorze czerwonym */
+  .button-red {
+    background: #e74c3c;
+  }
+  .button-red:hover {
+    background: #80838d;
+  }
+  .button-red:active,
+  .button-red:focus {
+    background: #80838d;
+  }
+  
+  /*Formularze*/
+  input{
+    height: 44px;
+    border: 1px solid #cecece;
+    border-radius: 0;
+    font-size: 16px;
+    color: #535353;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  input:active,
+  input:focus{
+    border: 1px solid #80838d;
+    outline:0;
+  }
+
+    /*Header*/
+    header{
+      background-color: #e74c3c;
+      color: white;
+      padding-top: 20px;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+
+    header h1{
+      margin: 0;
+    }
+
+    /*Main*/
+    main{
+     flex-grow: 1;
+     flex-shrink: 0;
+     flex-basis: auto;
+}
+
+  /* Footer */
+  footer{
+    background: #262933;
+    color: #bab9b9;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  /* Media Query dla urządzeń o minimalnej szerokości 992px */
+  /* czyli dla komputerów stacjonarnych */
+  @media (min-width: 992px) {
+    
+    .container {
+      max-width: 80%;
+    }
+  }
